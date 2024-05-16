@@ -49,7 +49,11 @@ int is_valid(Node* n){
     for(int i = 0; i < 9; i++)
        for(int j = 0; j < 9; j++)
        {
-          printf("%d", puerta[n->sudo[i][j]]);
+          for(int k = 0; k < 10; k++)
+             {
+                printf("%d", puerta[n->sudo[i][j]]);
+             }
+            printf("\n");
          if(puerta[n->sudo[i][j]] == 0)
             puerta[n->sudo[i][j]] = 1;
          else return 0;
