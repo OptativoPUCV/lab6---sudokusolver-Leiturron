@@ -60,7 +60,7 @@ int is_valid(Node* n){
            else return 0;
 
    //validar submatrices
-    for(int i = 0; i < 9; j++)
+    for(int i = 0; i < 9; i++)
        for(int j = 0; j < 9; j++)
           {
              

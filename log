@@ -25,3 +25,9 @@ sudoku.c:63:27: error: ‘j’ undeclared (first use in this function)
 sudoku.c:63:27: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 447310c
+Thu 16 May 2024 03:02:10 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|4
+total_score: 15/70
+37f97ca
