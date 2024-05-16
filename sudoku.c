@@ -95,7 +95,7 @@ List* get_adj_nodes(Node* n){
        {
           for(int j = 0; j < 9; j++)
               {
-                 if(n->sudo[0][2] == 0)
+                 if(n->sudo[i][j] == 0)
                  {
                     create = 1;
                     for(int k = 1; k <= 9; k++)
