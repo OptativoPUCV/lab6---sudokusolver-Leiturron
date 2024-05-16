@@ -269,3 +269,14 @@ Thu 16 May 2024 06:59:17 PM UTC:
  tests:  4|3
 total_score: 30/70
 868cca3
+Thu 16 May 2024 06:59:58 PM UTC: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:115:10: error: unused variable ‘S’ [-Werror=unused-variable]
+  115 |   Stack* S = createStack();
+      |          ^
+cc1: all warnings being treated as errors
+Compilation failed
+884d2bb
