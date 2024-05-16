@@ -122,9 +122,13 @@ Node* DFS(Node* initial, int* cont){
          
          List *adj = get_adj_nodes(n);
          Node *aux = first(adj);
-         push(S, aux);
+         while(aux)
+            {
+               push(S, aux);
+               aux = next(adj);
+            }
          (*cont)++;
-         aux = next(adj);
+         free(n);
       }
 
   
