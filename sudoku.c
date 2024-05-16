@@ -71,7 +71,7 @@ int is_valid(Node* n){
               printf("%i %i\n", i, j);
                 if(puerta2[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
                    puerta2[n->sudo[i][j]] = 1;
-                else return 0;
+                if(puerta2[n->sudo[i][j]] == 1)return 0;
            }
            
 
