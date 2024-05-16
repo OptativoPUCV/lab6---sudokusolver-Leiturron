@@ -60,16 +60,20 @@ int is_valid(Node* n){
           printf("%i %i\n", i, j);
          if(puerta[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
             puerta[n->sudo[i][j]] = 1;
-         //else return 0;
+         else return 0;
        }
    
    //validar columnas
    int puerta2[10] = {};
     for(int j = 0; j < 9; j++)
         for(int i = 0; i < 9; i++)
-           if(puerta2[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
-              puerta2[n->sudo[i][j]] = 1;
-           else return 0;
+           {
+              printf("%i %i\n", i, j);
+                if(puerta2[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
+                   puerta2[n->sudo[i][j]] = 1;
+                else return 0;
+           }
+           
 
    //validar submatrices
    int puerta3[10] = {};
