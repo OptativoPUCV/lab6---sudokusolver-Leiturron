@@ -55,7 +55,7 @@ int is_valid(Node* n){
                 printf("%d", n->sudo[i][j]);
              }
             printf("\n");
-         if(puerta[n->sudo[i][j]] == 0)
+         if(puerta[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
             puerta[n->sudo[i][j]] = 1;
          else return 0;
        }
@@ -64,7 +64,7 @@ int is_valid(Node* n){
    int puerta2[10] = {};
     for(int j = 0; j < 9; j++)
         for(int i = 0; i < 9; i++)
-           if(puerta2[n->sudo[i][j]] == 0)
+           if(puerta2[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
               puerta2[n->sudo[i][j]] = 1;
            else return 0;
 
@@ -77,7 +77,7 @@ int is_valid(Node* n){
       {
          int i=3*(k/3) + (p/3) ;
          int j=3*(k%3) + (p%3) ;
-         if(puerta3[n->sudo[i][j]] == 0)
+         if(puerta3[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
             puerta3[n->sudo[i][j]] = 1;
          else return 0;
       }
