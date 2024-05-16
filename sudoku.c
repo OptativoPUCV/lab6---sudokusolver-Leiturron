@@ -44,7 +44,7 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-   int puerta[10] = {};
+   int puerta[10] = {0, 1, 0, 0,0,0,0,0,0,0};
    for(int k = 0; k < 10; k++)
        {
           printf("%d", puerta[k]);
