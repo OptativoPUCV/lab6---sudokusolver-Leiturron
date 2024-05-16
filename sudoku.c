@@ -44,14 +44,6 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-   for(int k = 0; k < 9; k++)
-      {
-      for(int p = 0; p < 9;p++)
-       {
-          printf("%d", n->sudo[k][p]);
-       }
-      printf("\n");
-      }
    //validar filas
     for(int i = 0; i < 9; i++)
     {
@@ -76,8 +68,6 @@ int is_valid(Node* n){
          else if(puerta[n->sudo[i][j]] == 1)return 0;
       }
     }
-        
-           
 
    //validar submatrices
    for(int k = 0; k < 9; k++) 
