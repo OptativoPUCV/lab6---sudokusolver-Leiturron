@@ -44,22 +44,26 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-   int puerta[10] = {0,0,0,0,0,0,0,0,0,0};
+   int puerta[10] = {};
    //validar filas
     for(int i = 0; i < 9; i++)
        for(int j = 0; j < 9; j++)
-          if(puerta[n->sudo[i][j]] == 0)
-             puerta[n->sudo[i][j]] = 1;
-          else return 0;
-
+       {
+         if(puerta[n->sudo[i][j]] == 0)
+            puerta[n->sudo[i][j]] = 1;
+         else return 0;
+       }
+   
    //validar columnas
+   int puerta2[10] = {};
     for(int j = 0; j < 9; j++)
         for(int i = 0; i < 9; i++)
-           if(puerta[n->sudo[i][j]] == 0)
-              puerta[n->sudo[i][j]] = 1;
+           if(puerta2[n->sudo[i][j]] == 0)
+              puerta2[n->sudo[i][j]] = 1;
            else return 0;
 
    //validar submatrices
+   int puerta3[10] = {};
    for(int k = 0; k < 9; k++) 
    {
       int p;
@@ -67,8 +71,8 @@ int is_valid(Node* n){
       {
          int i=3*(k/3) + (p/3) ;
          int j=3*(k%3) + (p%3) ;
-         if(puerta[n->sudo[i][j]] == 0)
-            puerta[n->sudo[i][j]] = 1;
+         if(puerta3[n->sudo[i][j]] == 0)
+            puerta3[n->sudo[i][j]] = 1;
          else return 0;
       }
    } 
