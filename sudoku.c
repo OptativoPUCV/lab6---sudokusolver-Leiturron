@@ -60,7 +60,7 @@ int is_valid(Node* n){
           printf("%i %i\n", i, j);
          if(puerta[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
             puerta[n->sudo[i][j]] = 1;
-         else return 0;
+         if(puerta[n->sudo[i][j]] == 1) return 0;
        }
    
    //validar columnas
