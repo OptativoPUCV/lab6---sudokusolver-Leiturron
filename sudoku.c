@@ -44,7 +44,20 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
+   int puerta[10] = {0,0,0,0,0,0,0,0,0,0};
+   //validar filas
+    for(int i = 0; i < 9; i++)
+       for(int j = 0; j < 9; j++)
+          if(puerta[n->sudo[i][j]] == 0)
+             puerta[n->sudo[i][j]] = 1;
+          else return 0;
 
+   //validar columnas
+    for(int j = 0; j < 9; j++)
+        for(int i = 0; i < 9; i++)
+           if(puerta[n->sudo[i][j]] == 0)
+              puerta[n->sudo[i][j]] = 1;
+           else return 0;
     return 1;
 }
 
