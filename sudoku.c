@@ -44,7 +44,6 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-   int puerta[10] = {};
    for(int k = 0; k < 9; k++)
       {
       for(int p = 0; p < 9;p++)
@@ -55,13 +54,17 @@ int is_valid(Node* n){
       }
    //validar filas
     for(int i = 0; i < 9; i++)
-       for(int j = 0; j < 9; j++)
-       {
-          printf("%i %i\n", i, j);
-         if(puerta[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
-            puerta[n->sudo[i][j]] = 1;
-         else if(puerta[n->sudo[i][j]] == 1) return 0;
-       }
+    {
+       int puerta[10] = {};
+        for(int j = 0; j < 9; j++)
+        {
+           printf("%i %i\n", i, j);
+          if(puerta[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
+             puerta[n->sudo[i][j]] = 1;
+          else if(puerta[n->sudo[i][j]] == 1) return 0;
+        }
+    }
+       
    
    //validar columnas
    int puerta2[10] = {};
