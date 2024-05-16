@@ -190,3 +190,17 @@ Thu 16 May 2024 03:45:52 PM UTC:
  tests:  5|3
 total_score: 35/70
 1df6bff
+Thu 16 May 2024 03:50:27 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:100:20: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  100 |                    if(is_valid(adj) && adj->sudo[i][j] != 0);
+      |                    ^~
+sudoku.c:101:23: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  101 |                       pushBack(list, adj);
+      |                       ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+f2131f5
