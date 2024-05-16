@@ -118,6 +118,8 @@ Node* DFS(Node* initial, int* cont){
       {
          Node *n = top(S);
          pop(S);
+         if(is_final(n)) return n;
+         
          List *adj = get_adj_nodes(initial);
          Node *aux = first(adj);
          push(S, aux);
