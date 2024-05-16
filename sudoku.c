@@ -58,7 +58,6 @@ int is_valid(Node* n){
        int puerta[10] = {};
         for(int j = 0; j < 9; j++)
         {
-           printf("%i %i\n", i, j);
           if(puerta[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
              puerta[n->sudo[i][j]] = 1;
           else if(puerta[n->sudo[i][j]] == 1) return 0;
@@ -67,29 +66,31 @@ int is_valid(Node* n){
        
    
    //validar columnas
-   int puerta2[10] = {};
     for(int j = 0; j < 9; j++)
-        for(int i = 0; i < 9; i++)
-           {
-              printf("%i %i\n", i, j);
-                if(puerta2[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
-                   puerta2[n->sudo[i][j]] = 1;
-                if(puerta2[n->sudo[i][j]] == 1)return 0;
-           }
+    {
+       int puerta[10] = {};
+       for(int i = 0; i < 9; i++)
+      {
+         if(puerta[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
+            puerta[n->sudo[i][j]] = 1;
+         else if(puerta[n->sudo[i][j]] == 1)return 0;
+      }
+    }
+        
            
 
    //validar submatrices
-   int puerta3[10] = {};
    for(int k = 0; k < 9; k++) 
    {
+      int puerta[10] = {};
       int p;
-      for(p=0;p<9;p++)
+      for(p = 0; p < 9; p++)
       {
-         int i=3*(k/3) + (p/3) ;
-         int j=3*(k%3) + (p%3) ;
-         if(puerta3[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
-            puerta3[n->sudo[i][j]] = 1;
-         else return 0;
+         int i=3*(k/3) + (p/3);
+         int j=3*(k%3) + (p%3);
+         if(puerta[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
+            puerta[n->sudo[i][j]] = 1;
+         else if(puerta[n->sudo[i][j]] == 1) return 0;
       }
    } 
       
