@@ -90,16 +90,16 @@ int is_valid(Node* n){
 
 List* get_adj_nodes(Node* n){
     List* list=createList();
-    for(int i = 0; i < 9; i++)
-       for(int j = 0; j < 9; j++)
-          if(n->sudo[i][j] == 0)
-             for(int k = 1; k <= 9; k++)
-                {
-                   Node *adj = copy(n);
-                   adj->sudo[i][j] = k;
-                   if(is_valid(adj))
-                      pushBack(list, adj);
-                }
+    for(int k = 1; k <= 9; k++)
+      for(int i = 0; i < 9; i++)
+         for(int j = 0; j < 9; j++)
+            if(n->sudo[i][j] == 0)
+               {
+                  Node *adj = copy(n);
+                  adj->sudo[i][j] = k;
+                  if(is_valid(adj))
+                     pushBack(list, adj);
+               }
     return list;
 }
 
@@ -112,6 +112,7 @@ int is_final(Node* n){
 }
 
 Node* DFS(Node* initial, int* cont){
+  Stack* S = createStack();
    
   return NULL;
 }
