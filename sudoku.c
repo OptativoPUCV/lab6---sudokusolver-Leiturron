@@ -118,7 +118,7 @@ Node* DFS(Node* initial, int* cont){
       {
          Node *n = top(S);
          pop(S);
-         if(is_final(n)) return n;
+         if(is_final(n)) continue;
          
          List *adj = get_adj_nodes(n);
          Node *aux = first(adj);
@@ -130,9 +130,6 @@ Node* DFS(Node* initial, int* cont){
          (*cont)++;
          free(n);
       }
-
-  
-   
   return NULL;
 }
 
