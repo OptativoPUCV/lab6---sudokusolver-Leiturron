@@ -58,6 +58,14 @@ int is_valid(Node* n){
            if(puerta[n->sudo[i][j]] == 0)
               puerta[n->sudo[i][j]] = 1;
            else return 0;
+
+   //validar submatrices
+    for(int i = 0; i < 9; j++)
+       for(int j = 0; j < 9; j++)
+          {
+             
+          }
+       
     return 1;
 }
 
@@ -71,8 +79,7 @@ List* get_adj_nodes(Node* n){
                 {
                    Node *adj = copy(n);
                    adj->sudo[i][j] = k;
-                   if(is_valid(adj))
-                      pushBack(list, adj);
+                   pushBack(list, adj);
                 }
     return list;
 }

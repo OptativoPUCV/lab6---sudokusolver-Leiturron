@@ -14,3 +14,14 @@ Thu 16 May 2024 02:54:55 PM UTC:
  tests:  0|5
 total_score: 0/70
 bbde453
+Thu 16 May 2024 03:02:00 PM UTC: 
+ sudoku.c | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:63:27: error: ‘j’ undeclared (first use in this function)
+   63 |     for(int i = 0; i < 9; j++)
+      |                           ^
+sudoku.c:63:27: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+447310c
