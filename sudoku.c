@@ -112,9 +112,11 @@ int is_final(Node* n){
 }
 
 Node* DFS(Node* initial, int* cont){
+   printf("%d", *cont);
+   /*
    Stack* S = createStack();
    push(S, initial);
-   while(!is_empty(S))
+   while(get_size(S) != 0)
       {
          cont++;
          Node *n = top(S);
@@ -130,6 +132,7 @@ Node* DFS(Node* initial, int* cont){
             }
          free(n);
       }
+      */
   return NULL;
 }
 
